@@ -1,6 +1,7 @@
 #include"class.hpp"
 
 using namespace std;
+using json = nlohmann::json;
 
 int main()
 {
@@ -11,16 +12,15 @@ int main()
     map<int, student> students;
     map<int, teacher> teachers;
     map<int, staff> staffs;
-    init(students, teachers, staffs);
-    cout << "»¶Ó­Ê¹ÓÃ¸ßĞ£ÈËÔ±ĞÅÏ¢¹ÜÀíÏµÍ³£¡" << endl
-         << "ÇëÑ¡ÔñÒªÊ¹ÓÃµÄ¹¦ÄÜ£º" << endl
-         << "ÒªÔö¼ÓÒ»¸öĞÂµÄ½ÌÊ¦£¬ÇëÊäÈë¡°1¡± " << endl
-         << "Òª¸ù¾İ¿¨ºÅÉ¾³ı³ÉÔ±£¬ÇëÊäÈë¡°2¡±" << endl
-         << "Òª¸ù¾İĞÕÃû¿¨ºÅ²éÕÒ£¬ÇëÊäÈë¡°3¡±" << endl
-         << "ÒªÊä³öÒ»¸öÑ§ÔºÄÚµÄËùÓĞ½ÌÊ¦ºÍÑ§ÉúĞÅÏ¢£¬ÇëÊäÈë¡°4¡±" << endl
-         << "ÒªÍË³öÏµÍ³£¬ÇëÊäÈë¡°6¡±" << endl;
-    while(cin >> input)
-    {
-        
-    }
+    make(students, teachers, staffs);
+    json student_js = students;
+    // cout << "æ¬¢è¿ä½¿ç”¨é«˜æ ¡äººå‘˜ä¿¡æ¯ç®¡ç†ç³»ç»Ÿï¼" << endl
+    //      << "è¯·é€‰æ‹©è¦ä½¿ç”¨çš„åŠŸèƒ½ï¼š" << endl
+    //      << "è¦å¢åŠ ä¸€ä¸ªæ–°çš„æ•™å¸ˆï¼Œè¯·è¾“å…¥â€œ1â€ " << endl
+    //      << "è¦æ ¹æ®å¡å·åˆ é™¤æˆå‘˜ï¼Œè¯·è¾“å…¥â€œ2â€" << endl
+    //      << "è¦æ ¹æ®å§“åå¡å·æŸ¥æ‰¾ï¼Œè¯·è¾“å…¥â€œ3â€" << endl
+    //      << "è¦è¾“å‡ºä¸€ä¸ªå­¦é™¢å†…çš„æ‰€æœ‰æ•™å¸ˆå’Œå­¦ç”Ÿä¿¡æ¯ï¼Œè¯·è¾“å…¥â€œ4â€" << endl
+    //      << "è¦é€€å‡ºç³»ç»Ÿï¼Œè¯·è¾“å…¥â€œ6â€" << endl;
+    // auto js = json::parse(student_js);
+    cout << student_js << endl;
 }
